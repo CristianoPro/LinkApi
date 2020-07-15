@@ -74,7 +74,7 @@ const getGenerateOrderConfig = async order => {
   };
 };
 
-const SendOrder = async order => {
+const SendDeal = async order => {
   const config = await getGenerateOrderConfig(order);
   return axios(config)
     .then(resp => {
@@ -90,5 +90,5 @@ const SendOrder = async order => {
 
 export default {
   getGenerateOrderConfig,
-  SendOrder,
+  SendDeal,
 };

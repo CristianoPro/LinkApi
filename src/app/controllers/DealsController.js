@@ -9,8 +9,8 @@ class DealsController {
     wonDeals.forEach(wonDeal => {
       const { title, status, value, won_time } = wonDeal;
       Deals.create({ title, status, value, won_time })
-        .then(async order => {
-          await blingApi.SendOrder(order);
+        .then(async deal => {
+          await blingApi.SendDeal(deal);
         })
         .catch(err => {
           throw err;
